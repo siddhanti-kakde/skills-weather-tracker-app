@@ -1,0 +1,28 @@
+{
+	"mcpServers": {
+		"fetch": {
+			"type": "stdio",
+			"command": "uvx",
+			"args": [
+				"mcp-server-fetch"
+			],
+			"tools": [
+				"*"
+			]
+		},
+		"sqlite": {
+			"type": "stdio",
+			"command": "uvx",
+			"args": [
+				"--with",
+				"mcp<2",
+				"mcp-server-sqlite",
+				"--db-path",
+				"/workspaces/skills-weather-tracker-app/weather.db"
+			],
+			"tools": [
+				"*"
+			]
+		}
+	}
+}

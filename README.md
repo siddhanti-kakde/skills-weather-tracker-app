@@ -70,6 +70,18 @@ npm run stats -- "London"
 The CLI needs an internet connection for `add`. An unknown city or a network or
 API error is reported as a friendly message without a stack trace.
 
+## Weather dashboard
+
+Start the web dashboard with:
+
+```sh
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000). The dashboard shows recent
+weather logs, per-city summaries, and a temperature chart. Enter a city and
+select **Add / Refresh** to fetch and save its current weather.
+
 **Having trouble? 🤷**
 
 - For owner, choose your personal account or an organization.

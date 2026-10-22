@@ -41,7 +41,7 @@ export function describeWeatherCode(code) {
 async function fetchJson(url, endpointName) {
   let response;
   try {
-    response = await fetch(url);
+    response = await fetch(url, { signal: AbortSignal.timeout(15000) });
   } catch {
     throw new Error(`Could not reach the Open-Meteo ${endpointName} service. Check your network connection.`);
   }
