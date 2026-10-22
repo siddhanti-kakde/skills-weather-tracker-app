@@ -45,6 +45,31 @@ You ──prompt──▶ Copilot Agent Mode
 
 2. Give Mona about **20 seconds** to prepare the first lesson, then open the **Issues** tab of your new repository and open the issue titled **Exercise: Build a Weather Tracker with Copilot Agent Mode and MCP**.
 
+## Weather tracker CLI
+
+The CLI records current Open-Meteo observations in the existing `weather.db`
+database. Install dependencies once, then add, list, and summarize weather logs:
+
+```sh
+npm install
+node src/cli.js add "London"
+node src/cli.js add "Tokyo"
+node src/cli.js list
+node src/cli.js list --limit 5
+node src/cli.js stats "London"
+```
+
+Equivalent npm scripts are available:
+
+```sh
+npm run add -- "London"
+npm run list -- --limit 5
+npm run stats -- "London"
+```
+
+The CLI needs an internet connection for `add`. An unknown city or a network or
+API error is reported as a friendly message without a stack trace.
+
 **Having trouble? 🤷**
 
 - For owner, choose your personal account or an organization.
